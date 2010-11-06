@@ -1,0 +1,12 @@
+Clipboarder lets you save data and retrieve data in a quick and dirty way.
+I use it a lot when I am doing prototyping.
+It's basically just a wrapper around the java serialization API.
+
+Usage:
+
+// save any serializable object
+List<Widgets> widgets = getListFromDb();
+Clipboarder.put(widget, "widgets_version12");
+
+// retrieve the object in another program
+List<Widgets> widgets = (List<Widgets>) Clipboarder.get("widgets_version12");
